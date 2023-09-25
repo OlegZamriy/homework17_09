@@ -1,22 +1,20 @@
-num1 = float(input("Введіть перше число: "))
-num2 = float(input("Введіть друге число: "))
-num3 = float(input("Введіть третє число: "))
+meters = float(input("Введіть кількість метрів: "))
 
-print("Оберіть операцію:")
-print("1. Максимум")
-print("2. Мінімум")
-print("3. Середньоарифметичне")
-choice = int(input("Введіть номер операції (1, 2 або 3): "))
+print("Оберіть одиницю вимірювання для конвертації:")
+print("1. Милі")
+print("2. Дюйми")
+print("3. Ярди")
+choice = int(input("Введіть номер одиниці вимірювання (1, 2 або 3): "))
 
 if choice == 1:
-    result = max(num1, num2, num3)
-    print("Максимум із трьох чисел:", result)
+    miles = meters * 0.000621371
+    print(f"{meters} метрів дорівнює {miles} миль")
 elif choice == 2:
-    result = min(num1, num2, num3)
-    print("Мінімум із трьох чисел:", result)
+    inches = meters * 39.3701
+    print(f"{meters} метрів дорівнює {inches} дюймів")
 elif choice == 3:
-    result = (num1 + num2 + num3) / 3
-    print("Середньоарифметичне трьох чисел:", result)
+    yards = meters * 1.09361
+    print(f"{meters} метрів дорівнює {yards} ярдів")
 else:
-    print("Некоректний вибір операції")
+    print("Некоректний вибір одиниці вимірювання")
 
